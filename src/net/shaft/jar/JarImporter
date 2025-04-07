@@ -1,0 +1,14 @@
+package net.shaft.jar;
+
+import java.io.File;
+
+public class JarImporter {
+    public static void importJar(String pathToJar) {
+        try {
+            JarHelper.loadJar(new File(pathToJar));
+            System.out.println("JAR успешно загружен: " + pathToJar);
+        } catch (Exception e) {
+            System.err.println("Ошибка при загрузке JAR: " + e.getMessage());
+        }
+    }
+}
